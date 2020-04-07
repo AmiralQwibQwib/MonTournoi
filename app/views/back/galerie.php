@@ -3,34 +3,12 @@
     <!-- section de galerie pour mettre en avant les photos de figurines des membres-->
     <section id="gallery">
         <div class="absolut">
-            <img src="app/public/img/nexttime.png" alt="à venir">
-            <h3>Auteur photo</h3>
-            <p>insérer description / légende ici</p>
-        </div>
-        <div class="absolut">
-            <img src="app/public/img/nexttime.png" alt="à venir">
-            <h3>Auteur photo</h3>
-            <p>insérer description / légende ici</p>
-        </div>
-        <div class="absolut">
-            <img src="app/public/img/nexttime.png" alt="à venir">
-            <h3>Auteur photo</h3>
-            <p>insérer description / légende ici</p>
-        </div>
-        <div class="absolut">
-            <img src="app/public/img/nexttime.png" alt="à venir">
-            <h3>Auteur photo</h3>
-            <p>insérer description / légende ici</p>
-        </div>
-        <div class="absolut">
-            <img src="app/public/img/nexttime.png" alt="à venir">
-            <h3>Auteur photo</h3>
-            <p>insérer description / légende ici</p>
-        </div>
-        <div class="absolut">
-            <img src="app/public/img/nexttime.png" alt="à venir">
-            <h3>Auteur photo</h3>
-            <p>insérer description / légende ici</p>
+            <form action="index.php?action=galerie">
+                <input type="image">
+                <input type="text" value="title">
+                <input type="text" value="content">
+                <input type="button" action="send">
+            </form>
         </div>
     </section>
     <!-- plugin jquery de repositionnement d'image à venir (type lightbox) -->

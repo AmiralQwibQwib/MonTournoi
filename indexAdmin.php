@@ -12,6 +12,7 @@ try{
     if (isset($_POST['idamin']) AND $_POST['idadmin'] ==  "admin"){
         $controllerAdmin -> home();
 }
+    
     else{
         $controllerAdmin -> login();
     }

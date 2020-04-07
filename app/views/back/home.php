@@ -3,22 +3,11 @@
 <main id="core">
     <!-- Section de mise en avant des principaux tournois du moment -->
     <section class="glowup">
-        <div class="tournament1">
-            <img src="app/public/img/FWD.png" alt="FWD" class="picture">
-            <h2>FWD</h2>
-        </div>
-        <div class="tournament2">
-            <img src="app/public/img/chief40k.jpg" alt="armychief40k" class="picture">
-            <h2>Champion du Warp</h2>
-        </div>
-        <div class="tournament3">
-            <img src="app/public/img/interregionaos.png" alt="interregion aos" class="picture">
-            <h2>Inter Région AOS</h2>
-        </div>
-        <div class="tournament4">
-            <img src="app/public/img/ruinedcities40k.jpg" alt="figurine" class="picture">
-            <h2>Tournoi d'été Vannes</h2>
-        </div>
+        <form action="index.php?action=home">
+            <input type="image">
+            <input type="text" value="title">
+            <input type="button" action="send">
+        </form>
     </section>
 
     <section class="paintup">

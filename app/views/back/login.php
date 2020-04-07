@@ -1,5 +1,5 @@
 <main>
-    <form id="contact" action="home.php" method="post">
+	<form id="contact" action="indexAdmin.php?action=dashboard" method="post">
         <p>
 			<label for="idadmin">Identifiant :</label>
 			<input type="text" name="idadmin" id="idadmin" placeholder="identifiant" required>
