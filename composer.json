@@ -1,0 +1,15 @@
+{
+    "name": "kiera/tournoi",
+    "authors": [
+        {
+            "name": "Kiéran GOURLAOUEN",
+            "email": "kieran50@live.fr"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Projet\\" : "./app/"
+        }
+    },
+    "require": {}
+}

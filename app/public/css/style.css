@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#page{
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}
+.slider{
+    display: flex;
+    justify-content: center;
+    max-height: 800px;
+    width: 100%;
+}
+.navigation ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.navigation ul li{
+    padding: 5px 15px;
+}
+#core .glowup{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 92%;
+    justify-content: center;
+}
+.glowup h2{
+    position: relative;
+}
+.tournament1, .tournament2, .tournament3, .tournament4{
+    border: solid;
+    border-width: 2px 4px;
+    width: 49%;
+}
+.tournament2, .tournament4{
+    margin-left: 5px;
+}
+.tournament3, .tournament4{
+    margin-top: 5px;
+}
+#core .picture{
+    height: 330px;
+    width: 100%;
+    border-bottom: solid;
+    border-width: 2px 4px;
+}
+#slide {
+    position: relative;
+    width: 1280px;
+    margin: auto;
+}
+
+#slide img {
+    height: 80%;
+}
+
+#precedent, #suivant {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    position: absolute;
+    top: 300px;
+    font-size: 100px;
+    color: rgba(220, 220, 220, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+
+#precedent {
+    left: 0;
+}
+
+#suivant {
+    right: 0;
+}
+
+#slide:hover #precedent, #slide:hover #suivant {
+    opacity: 1;
+}
+

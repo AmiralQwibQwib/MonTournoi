@@ -1,0 +1,23 @@
+#gallery{
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#gallery div{
+    width: 46%;
+}
+#gallery div img{
+    max-width: 100%;
+}
+#gallery div{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+#gallery div h3, #gallery div p{
+    
+}
+#gallery div p{
+
+}

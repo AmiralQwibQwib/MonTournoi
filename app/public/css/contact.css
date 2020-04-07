@@ -1,0 +1,51 @@
+#contact{
+    padding: 10px 0px;
+}
+#contact fieldset{
+    border: 1px dashed black;
+    padding: 20px 10px;
+    margin-bottom: 15px;
+}
+#contact fieldset legend{
+    color: black;
+    font-style: italic;
+}
+#contact fieldset .colonne{
+    width: 48%;
+}
+#contact p{
+    margin: 8px 0px;
+}
+#contact p label{
+    display: inline-block;
+    width: 131px;
+    vertical-align: top;
+}
+#contact p label.petit{
+    width: 80px;
+}
+#contact fieldset input:hover,#contact fieldset textarea:hover{
+    background-color:#ECECEC;
+}
+#contact fieldset input:focus,#contact fieldset textarea:focus{
+    background-color: whitesmoke;
+    color: black;
+}
+#contact p input[type=submit],#contact p input[type=reset]{
+    padding: 5px 15px;
+    background-color: grey;
+    color: black;
+    border: none;
+    margin: 10px;
+}
+#contact .bouton{
+    text-align: center;
+}
+#contact p input[type=submit]:hover,#contact p input[type=reset]:hover{
+    color:black;
+    background-color:red;
+}
+#contact fieldset input,#contact fieldset textarea{
+    /* marge dans la zone de saisie*/
+    padding: 5px;
+}

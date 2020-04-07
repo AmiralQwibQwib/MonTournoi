@@ -1,0 +1,27 @@
+#lowpage{
+    width: 98%;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+#foot{
+    display: flex;
+    flex-direction: row;
+}
+#foot ul li{
+    list-style-type: none;
+}
+/* paramètres du menu footer */
+#secondary-menu ul li{
+    padding-top: 5px;
+    padding-right: 20px;
+}
+/*paramètre img footer*/
+#hobby img{
+    padding-right: 20px;
+}
+/* paramètres des logo réseaux sociaux */
+#media ul li img{
+    width: 30px;
+    height: 30px;
+}
