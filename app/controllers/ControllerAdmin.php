@@ -3,25 +3,40 @@
 namespace Projet\controllers;
 
 class ControllerAdmin{
-    function login(){
-        // $homeFront = new \Projet\models\FrontManager();
-        // $accueil = $homeFront->ViewFront();
- 
-        require 'app/views/back/login.php';
-    }
-    function contactBack(){
-        require 'app/views/back/contact.php';
-    }
-    function aboutBack(){
-        require 'app/views/back/about.php';
-    }
-    function tournamentBack(){
-        require 'app/views/back/tournament.php';
-    }
-    function galerieBack(){
-        require 'app/views/back/galerie.php';
-    }
-    function dashboardBack(){
-        require 'app/views/back/dashboard.php';
+    //function pour création admin
+function creatAdmin($loginAdmin, $pswAdmin)
+{
+    $userManager = new \Projet\Models\UserManager();
+    $mdp = $userManager->creatMdpAdmin($loginAdmin, $pswAdmin);
+}
+function connexionAdm($pseudo, $mdp)
+    { //recup du mot de pass
+        $userManager = new \Projet\Models\UserManager();
+        $connexAdm = $userManager->recupMdp($pseudo, $mdp);
+        $resultat = $connexAdm->fetch();
+        $isPasswordCorrect = password_verify($mdp, $resultat['pswAdmin']);
+        $_SESSION['loginAdmin'] = $resultat['loginAdmin']; // transformation des variables recupérées en session
+        $_SESSION['pswAdmin'] = $resultat['pswAdmin'];
+        $_SESSION['idUsers'] = $resultat['idUsers'];
+        if ($isPasswordCorrect) {
+
+            $CrochetManager = new \Projet\Models\CrochetManager();
+            $nbrItemCrochet = $CrochetManager->nbrItemC();
+
+
+            $userManager = new \Projet\Models\UserManager();
+            $nbrComment = $userManager->nbrComents();
+            $nbrCommentReport = $userManager->nbrReportComment();
+            $nbrCommentBook = $userManager->nbrVisitorBook();
+            $nbrReportBook = $userManager->nbrReportCommentBook();
+            $nbrMail = $userManager->nbrUserMail();
+
+            require 'app/views/backend/tableauDeBordAdminView.php';
+        } else {
+            echo 'vos identifiants sont incorrect';
+            //require('views/backend/erreur.php');
+        }
+
+
     }
 }
