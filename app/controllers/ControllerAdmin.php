@@ -31,7 +31,7 @@ function connexionAdm($pseudo, $mdp)
             $nbrReportBook = $userManager->nbrReportCommentBook();
             $nbrMail = $userManager->nbrUserMail();
 
-            require 'app/views/backend/tableauDeBordAdminView.php';
+            require 'app/views/back/dashboard.php';
         } else {
             echo 'vos identifiants sont incorrect';
             //require('views/backend/erreur.php');
