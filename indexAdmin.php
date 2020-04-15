@@ -10,8 +10,10 @@ try{
     $controllerAdmin = new \Projet\controllers\ControllerAdmin(); //objet controller
 
     //======================= connexion admin ==========================================
-
-    if ($_GET['action'] == 'loginAdmin') { //connexion admin
+    if ($_GET['action'] == 'connect'){
+        $controllerAdmin -> connect();
+    }
+    if ($_GET['action'] == 'login') { //connexion admin
         $pseudo = htmlspecialchars($_POST['name']);
         $mdp = $_POST['pass'];
         if (!empty($pseudo) && !empty($mdp)) {

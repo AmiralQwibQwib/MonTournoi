@@ -9,11 +9,14 @@ function creatAdmin($loginAdmin, $pswAdmin)
     $userManager = new \Projet\Models\UserManager();
     $mdp = $userManager->creatMdpAdmin($loginAdmin, $pswAdmin);
 }
-function connexionAdm($pseudo, $mdp)
+function connect(){
+    require 'app/views/back/login.php';
+}
+function loginAdmin($pseudo, $mdp)
     { //recup du mot de pass
         $userManager = new \Projet\Models\UserManager();
-        $connexAdm = $userManager->recupMdp($pseudo, $mdp);
-        $resultat = $connexAdm->fetch();
+        $loginAdmin = $userManager->recupMdp($pseudo, $mdp);
+        $resultat = $loginAdmin->fetch();
         $isPasswordCorrect = password_verify($mdp, $resultat['pswAdmin']);
         $_SESSION['loginAdmin'] = $resultat['loginAdmin']; // transformation des variables recupérées en session
         $_SESSION['pswAdmin'] = $resultat['pswAdmin'];
